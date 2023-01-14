@@ -42,8 +42,8 @@ public class Date212 {
 		}
 	
 
-	public static int compareTo(Date212 other, Date212 date) {			// compare method that compares the dates
-		 return date.toString().compareTo(other.toString());
+	public static int compareTo(Date212 date) {			// compare method that compares the dates
+		 return this.toString().compareTo(date.toString());
 							
 					}
 	
