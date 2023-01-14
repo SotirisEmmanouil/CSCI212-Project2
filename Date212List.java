@@ -1,21 +1,21 @@
 public class Date212List {
    
-   protected  Date212Node first = new Date212Node(null);
+   protected  Date212Node first = new Date212Node(null);	//protected variables and object instances 
    protected  Date212Node last = first;
    protected  int length = 0;
    
-   public int getLength() {
+   public int getLength() {					//get length method 
       return length;
    }
    
-   public void append(Date212 d) {
+   public void append(Date212 d) {				//append a node 
       Date212Node t = new Date212Node(d);
       last.next = t;
       last = t;
       length++;
    }
  
-   public String printDate212List(){
+   public String printDate212List(){			    //print method for the LinkedList
 	    String s = "";
 	    Date212Node p = first.next;
 
@@ -26,8 +26,8 @@ public class Date212List {
 	        return s;
 
 	}
- 
-   public boolean equals(Object other) {
+ 	
+   public boolean equals(Object other) {		   //equals method to check if two nodes are equal to each other
     if (other == null || getClass() != other.getClass()|| length != ((Date212List) other).length)
           return false;
 
