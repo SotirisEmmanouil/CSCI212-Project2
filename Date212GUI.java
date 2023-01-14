@@ -15,7 +15,7 @@ public class Date212GUI extends JFrame {
 	public static TextArea unsortedDates;
 	public static TextArea sortedDates;  
 
-  public static void openGUI() {
+    public static void openGUI() {
 	     Date212GUI DateFrame = new Date212GUI();
 	     unsortedDates = new TextArea("Unsorted\n\n");
 	     sortedDates = new TextArea("Sorted\n\n");
@@ -36,41 +36,41 @@ public class Date212GUI extends JFrame {
 	}
 	
 	
-	 public static void readFromFile(String filename)  {
+   public static void readFromFile(String filename)  {
 	    int k = 0;
 	    String line, line2;
-	 		DateFile = new TextFileInput(filename);
-	 			line = DateFile.readLine();
+	    DateFile = new TextFileInput(filename);
+	 	line = DateFile.readLine();
 	 				
-	 			while (line!=null) {									// count the amount of tokens
-	 				DateTokens = new StringTokenizer(line,",");
-	 					tokens += DateTokens.countTokens();
-	 						line = DateFile.readLine();
+	    while (line!=null) {							// count the amount of tokens
+	 	DateTokens = new StringTokenizer(line,",");
+	 		tokens += DateTokens.countTokens();
+	 	line = DateFile.readLine();
 	 				}
-	 				dateListUnsorted = new String[tokens];				// declare an array with the size of the tokens
-	 				DateFile2 = new TextFileInput(filename);
-		 			line2 = DateFile2.readLine();
+	 	dateListUnsorted = new String[tokens];				// declare an array with the size of the tokens
+	 DateFile2 = new TextFileInput(filename);
+		line2 = DateFile2.readLine();
 		 			
-	 					while (line2!= null) {								//while there are more lines, create tokens
-	 					DateTokens2 = new StringTokenizer(line2,",");	
-	 						while (DateTokens2.hasMoreTokens()) {				//while there are more tokens, append the tokens to the array
-	 							dateListUnsorted[k++] = DateTokens2.nextToken();		
+	 	while (line2!= null) {						//while there are more lines, create tokens
+	 	DateTokens2 = new StringTokenizer(line2,",");	
+	 	while (DateTokens2.hasMoreTokens()) {				//while there are more tokens, append the tokens to the array
+	    dateListUnsorted[k++] = DateTokens2.nextToken();		
 	 			}
-	 								line2= DateFile2.readLine();				//read the next line
+	 	 line2= DateFile2.readLine();				//read the next line
 	 				
 	 					}
 	 				
 
 	 		}
 	 
-	 public static void printList(String [] list) {			//append the unsorted array to the GUI
-		 	UnsortedDate212List unsortedList = new UnsortedDate212List();
-		 	SortedDate212List sortedList = new SortedDate212List(); 
-		 for (int i=0;i<list.length;i++) {
+    public static void printList(String [] list) {			//append the unsorted array to the GUI
+	  UnsortedDate212List unsortedList = new UnsortedDate212List();
+		SortedDate212List sortedList = new SortedDate212List(); 
+		  for (int i=0;i<list.length;i++) {
 			 unsortedList.append(new Date212(list[i]));
 			 sortedList.addSorted(new Date212(list[i]));
 		 }
 			unsortedDates.append(unsortedList.printDate212List());	  	
-			 sortedDates.append(sortedList.printDate212List());  
+			  sortedDates.append(sortedList.printDate212List());  
 	 }
 }
