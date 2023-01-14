@@ -30,7 +30,7 @@ public class Date212GUI extends JFrame {
 	       unsortedDates.setEditable(false);
 	       sortedDates.setEditable(false);
 	       readFromFile(FileName);
-	       printList(dateListUnsorted);
+	       printLists(dateListUnsorted);
 	      
 	
 	}
@@ -63,7 +63,7 @@ public class Date212GUI extends JFrame {
 
 	 		}
 	 
-    public static void printList(String [] list) {			//append the unsorted array to the GUI
+    public static void printLists(String [] list) {			//append the unsorted array to the GUI
 	  UnsortedDate212List unsortedList = new UnsortedDate212List();
 		SortedDate212List sortedList = new SortedDate212List(); 
 		  for (int i=0;i<list.length;i++) {
