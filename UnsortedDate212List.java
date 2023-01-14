@@ -1,6 +1,6 @@
 public class UnsortedDate212List extends Date212List{
 	
 	public void add(Date212 w) {
-		  super.append(w);
+		  super.append(w);		//append a node 
 	}
 }
