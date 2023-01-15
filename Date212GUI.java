@@ -63,11 +63,11 @@ public class Date212GUI extends JFrame {
 
 	 		}
 	 
-    public static void printLists(String [] list) {			//append the unsorted array to the GUI
+    public static void printLists(String [] list) {			//append the dates via LinkedLists to the GUI
 	  UnsortedDate212List unsortedList = new UnsortedDate212List();
 		SortedDate212List sortedList = new SortedDate212List(); 
 		  for (int i=0;i<list.length;i++) {
-			 unsortedList.append(new Date212(list[i]));
+			 unsortedList.add(new Date212(list[i]));
 			 sortedList.sortedInsert(new Date212(list[i]));
 		 }
 			unsortedDates.append(unsortedList.printDate212List());	  	
