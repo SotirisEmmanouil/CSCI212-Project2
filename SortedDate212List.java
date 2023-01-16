@@ -1,4 +1,8 @@
 public class SortedDate212List extends Date212List{
+	
+   public SortedDate212List() {
+		super();
+	}
 
    public void add(Date212 d) {		//append a node in a sorted fashion
 	  Date212Node Node = new Date212Node(d);
