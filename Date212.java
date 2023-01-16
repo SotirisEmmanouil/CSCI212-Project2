@@ -35,8 +35,8 @@ public class Date212 {
 		return day = d;
 	}
 	
-	public static boolean equals(Date212 date, Date212 date2) {		//equals method that checks to see if two dates are equal 
-		if(date.toString().equals(date2.toString()))
+	public boolean equals(Date212 date) {		//equals method that checks to see if two dates are equal 
+		if(this.toString().equals(date.toString()))
 				return true;
 				  return false;    	
 		}
