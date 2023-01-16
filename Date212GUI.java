@@ -68,7 +68,7 @@ public class Date212GUI extends JFrame {
 		SortedDate212List sortedList = new SortedDate212List(); 
 		  for (int i=0;i<list.length;i++) {
 			 unsortedList.add(new Date212(list[i]));
-			 sortedList.sortedInsert(new Date212(list[i]));
+			 sortedList.add(new Date212(list[i]));
 		 }
 			unsortedDates.append(unsortedList.printDate212List());	  	
 			  sortedDates.append(sortedList.printDate212List());  
